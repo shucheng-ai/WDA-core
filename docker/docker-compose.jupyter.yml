@@ -1,0 +1,15 @@
+version: '3'
+services:
+  local-core:
+    image: local/core
+    container_name: core-jupyter
+    command: >
+      /bin/bash -c "
+        cd src;
+        jupyter notebook --allow-root
+      "
+    ports :
+      - 8888:8888
+    volumes:
+      - ../:/src
+

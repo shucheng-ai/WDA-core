@@ -1,0 +1,8 @@
+from ubuntu:18.04
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LANG C.UTF-8
+RUN apt-get update
+RUN apt-get install -y libboost-all-dev python3-pip libpython3-dev vim libgoogle-glog-dev
+RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ numpy cmake 
+#RUN pip3 install numpy cmake
+

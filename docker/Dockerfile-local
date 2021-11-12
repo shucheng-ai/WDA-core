@@ -1,0 +1,5 @@
+from cyborg/core
+RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ scikit-build
+RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ opencv-python jupyter notebook 
+RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ matplotlib
+ADD jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py

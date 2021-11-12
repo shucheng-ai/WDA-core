@@ -1,0 +1,17 @@
+version: '3'
+services:
+  core:
+    image: cyborg/core
+    container_name: cyborg-core
+    user : root
+    command: >
+      /bin/bash -c "
+        cd src;
+        mkdir build;
+        cd build;
+        cmake ..;
+        make;
+      "
+    volumes:
+      - ../:/src
+
